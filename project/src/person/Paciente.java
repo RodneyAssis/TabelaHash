@@ -1,5 +1,6 @@
 package person;
 
+import java.util.HashMap;
 import java.util.Objects;
 
 public class Paciente {
@@ -11,6 +12,34 @@ public class Paciente {
     private final String responsavel;
     private final String numResponsavel;
     private final boolean isAlergico;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDataNasc() {
+        return dataNasc;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public String getNumeroTel() {
+        return numeroTel;
+    }
+
+    public String getResponsavel() {
+        return responsavel;
+    }
+
+    public String getNumResponsavel() {
+        return numResponsavel;
+    }
+
+    public boolean isAlergico() {
+        return isAlergico;
+    }
 
     public Paciente(int id, String name, int dataNasc, String endereco,
                     String numeroTel, String responsavel,
@@ -50,6 +79,7 @@ public class Paciente {
 
         return String.format("(%s) %s-%s", codigoArea, prefixo, sufixo);
     }
+
 
     public int getId() {
         return id;
